@@ -53,8 +53,8 @@ export default async function RootLayout(props: {
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
-      <body>
+    <html lang={locale} dir={locale === 'ar' ? 'rtl' : 'ltr'}>
+      <body suppressHydrationWarning>
         <NextIntlClientProvider>
           {props.children}
 

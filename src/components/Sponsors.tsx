@@ -4,7 +4,6 @@ import betterStackLogo from '@/public/assets/images/better-stack-dark.png';
 import checklyLogo from '@/public/assets/images/checkly-logo-light.png';
 import clerkLogo from '@/public/assets/images/clerk-logo-dark.png';
 import codeRabbitLogo from '@/public/assets/images/coderabbit-logo-light.svg';
-import crowdinLogo from '@/public/assets/images/crowdin-dark.png';
 import nextJsBoilerplateLogo from '@/public/assets/images/nextjs-boilerplate-saas.png';
 import posthogLogo from '@/public/assets/images/posthog-logo.svg';
 import sentryLogo from '@/public/assets/images/sentry-dark.png';
@@ -37,11 +36,6 @@ export const Sponsors = () => (
         <td className="border-2 border-gray-300 p-3">
           <a href="https://launch.arcjet.com/Q6eLbRE">
             <Image src={arcjetLogo} alt="Arcjet" width={220} />
-          </a>
-        </td>
-        <td className="border-2 border-gray-300 p-3">
-          <a href="https://l.crowdin.com/next-js">
-            <Image src={crowdinLogo} alt="Crowdin" width={220} />
           </a>
         </td>
         <td className="border-2 border-gray-300 p-3">

@@ -35,8 +35,7 @@
   "About": {
     "meta_title": "About",
     "meta_description": "About page description",
-    "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software.",
-    "translation_powered_by": "Translation powered by"
+    "about_paragraph": "Welcome to our About page! We are a team of passionate individuals dedicated to creating amazing software."
   },
   "Portfolio": {
     "meta_title": "Portfolio",

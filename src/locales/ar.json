@@ -1,0 +1,79 @@
+{
+  "RootLayout": {
+    "home_link": "الرئيسية",
+    "about_link": "من نحن",
+    "counter_link": "العداد",
+    "portfolio_link": "المعرض",
+    "sign_in_link": "تسجيل الدخول",
+    "sign_up_link": "إنشاء حساب"
+  },
+  "BaseTemplate": {
+    "description": "كود انطلاق لمشروع Next.js مع Tailwind CSS",
+    "footer_text": "© {year} {name}. صُنع بـ <author></author>.",
+    "main_navigation_label": "التنقل الرئيسي"
+  },
+  "Index": {
+    "meta_title": "عرض قالب Next.js",
+    "meta_description": "Next.js Boilerplate هو كود الانطلاق المثالي لمشروعك. ابنِ تطبيق React باستخدام إطار عمل Next.js.",
+    "sponsors_title": "الرعاة",
+    "zap_emoji_label": "برق"
+  },
+  "Counter": {
+    "meta_title": "العداد",
+    "meta_description": "مثال على عملية قاعدة بيانات",
+    "security_powered_by": "الأمان وكشف البوت وتحديد معدل الطلبات مدعوم بـ"
+  },
+  "CounterForm": {
+    "presentation": "العداد مخزَّن في قاعدة البيانات ويُزاد بالقيمة التي تحددها.",
+    "label_increment": "زيادة بمقدار",
+    "button_increment": "زيادة",
+    "error_increment_range": "يجب أن تكون القيمة بين 1 و 3"
+  },
+  "CurrentCount": {
+    "count": "العدد: {count}"
+  },
+  "About": {
+    "meta_title": "من نحن",
+    "meta_description": "وصف صفحة من نحن",
+    "about_paragraph": "مرحباً بك في صفحة من نحن! نحن فريق من المتحمسين المكرسين لإنشاء برامج رائعة."
+  },
+  "Portfolio": {
+    "meta_title": "المعرض",
+    "meta_description": "مرحباً بك في صفحة معرض أعمالي!",
+    "presentation": "مرحباً بك في صفحة معرض أعمالي! ستجد هنا مجموعة مختارة بعناية من أعمالي وإنجازاتي. من خلال هذا المعرض، أسعى إلى إبراز خبرتي وإبداعي والقيمة التي أستطيع تقديمها لمشاريعك.",
+    "portfolio_name": "معرض {name}",
+    "error_reporting_powered_by": "الإبلاغ عن الأخطاء مدعوم بـ"
+  },
+  "PortfolioSlug": {
+    "meta_title": "معرض {slug}",
+    "meta_description": "وصف معرض {slug}",
+    "header": "معرض {slug}",
+    "content": "أُنشئت مجموعة من المواد الترويجية وعناصر العلامة التجارية لحدث مؤسسي. صُمم موضوع موحد بصرياً يشمل شعاراً وملصقات ولافتات وأصولاً رقمية. تم دمج هوية علامة العميل التجارية مع إضفاء طابع معاصر ومبتكر عليها.",
+    "code_review_powered_by": "مراجعة الكود مدعومة بـ"
+  },
+  "SignIn": {
+    "meta_title": "تسجيل الدخول",
+    "meta_description": "سجّل دخولك إلى حسابك بسهولة."
+  },
+  "SignUp": {
+    "meta_title": "إنشاء حساب",
+    "meta_description": "أنشئ حسابك بسهولة من خلال عملية التسجيل البسيطة."
+  },
+  "Dashboard": {
+    "meta_title": "لوحة التحكم",
+    "hello_message": "مرحباً {email}!",
+    "alternative_message": "هل تحتاج إلى ميزات متقدمة؟ تعددية المستأجرين والفرق، الأدوار والصلاحيات، Shadcn UI، أمان الأنواع الشامل مع oRPC، دفع Stripe، الوضع الفاتح/الداكن. جرّب <url></url>.",
+    "max_message": "أو هل تحتاج إلى حزمة مصادقة ذاتية الاستضافة (Better Auth)؟ جرّب <url></url>."
+  },
+  "UserProfile": {
+    "meta_title": "الملف الشخصي"
+  },
+  "DashboardLayout": {
+    "dashboard_link": "لوحة التحكم",
+    "user_profile_link": "إدارة حسابك",
+    "sign_out": "تسجيل الخروج"
+  },
+  "LocaleSwitcher": {
+    "change_language": "تغيير اللغة"
+  }
+}
