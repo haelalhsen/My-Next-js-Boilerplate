@@ -17,13 +17,22 @@
 - Skip recaps unless the result is ambiguous or you need more input.
 
 ## Commands
-Only these `bun run` scripts: `build-local`, `lint`, `check:types`, `check:deps`, `check:i18n`, `test`, `test:e2e`.
+Only these `bun run` scripts: `build-local`, `lint`, `check:types`, `check:deps`, `check:i18n`, `test`, `test:e2e`, `db:generate`, `db:migrate`.
 
 ## Git Commits
 Conventional Commits: `type: summary` without scope. The summary should be a short, specific sentence that explains what changed and where or why, not a vague phrase. Types: `feat|fix|docs|style|refactor|perf|test|build|ci|chore|revert`. `BREAKING CHANGE:` footer when needed.
 
 ## Env
 All env vars validated in `Env.ts`; never read `process.env` directly.
+
+## Auth (Better Auth)
+- Server components: `auth.api.getSession({ headers: await headers() })` from `@/libs/Auth`.
+- Client components: `authClient` from `@/libs/AuthClient` — use `signIn.email()`, `signUp.email()`, `signOut()`.
+- Never modify the `user`, `session`, `account`, `verification` tables directly; they are owned by Better Auth.
+
+## Database
+- App schema lives in `src/models/Schema.ts`. After changes: `db:generate` → `db:migrate`.
+- No need to restart the dev server after migrating.
 
 ## Styling
 Tailwind v4 utility classes. Reuse shared components. Responsive. No unnecessary classes.
@@ -46,6 +55,9 @@ Tailwind v4 utility classes. Reuse shared components. Responsive. No unnecessary
 - Context-specific keys (`card_title`, `meta_description`). Use `t.rich(...)` for markup.
 - Use sentence case for translations.
 - Error messages: short, no "try again" variants.
+- Supported locales: `en` (default), `fr`, `ar`. Translation files: `src/locales/<locale>.json`.
+- When adding a key, update ALL locale files (`en.json`, `fr.json`, `ar.json`). Run `check:i18n` to verify.
+- Arabic (`ar`) is RTL. Adding a new RTL locale requires updating the `dir` check in `src/app/[locale]/layout.tsx`.
 
 ## JSDoc
 - Start each block with `/**` directly above the symbol.
