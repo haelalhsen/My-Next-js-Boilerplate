@@ -53,11 +53,24 @@
   },
   "SignIn": {
     "meta_title": "تسجيل الدخول",
-    "meta_description": "سجّل دخولك إلى حسابك بسهولة."
+    "meta_description": "سجّل دخولك إلى حسابك بسهولة.",
+    "email_label": "البريد الإلكتروني",
+    "password_label": "كلمة المرور",
+    "button_sign_in": "تسجيل الدخول",
+    "no_account": "ليس لديك حساب؟",
+    "sign_up_link": "إنشاء حساب",
+    "error_invalid_credentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة"
   },
   "SignUp": {
     "meta_title": "إنشاء حساب",
-    "meta_description": "أنشئ حسابك بسهولة من خلال عملية التسجيل البسيطة."
+    "meta_description": "أنشئ حسابك بسهولة من خلال عملية التسجيل البسيطة.",
+    "name_label": "الاسم",
+    "email_label": "البريد الإلكتروني",
+    "password_label": "كلمة المرور",
+    "button_sign_up": "إنشاء حساب",
+    "have_account": "لديك حساب بالفعل؟",
+    "sign_in_link": "تسجيل الدخول",
+    "error_email_taken": "يوجد حساب بهذا البريد الإلكتروني بالفعل"
   },
   "Dashboard": {
     "meta_title": "لوحة التحكم",
@@ -66,7 +79,9 @@
     "max_message": "أو هل تحتاج إلى حزمة مصادقة ذاتية الاستضافة (Better Auth)؟ جرّب <url></url>."
   },
   "UserProfile": {
-    "meta_title": "الملف الشخصي"
+    "meta_title": "الملف الشخصي",
+    "name_label": "الاسم",
+    "email_label": "البريد الإلكتروني"
   },
   "DashboardLayout": {
     "dashboard_link": "لوحة التحكم",

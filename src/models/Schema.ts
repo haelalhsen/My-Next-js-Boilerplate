@@ -1,17 +1,4 @@
-import { integer, pgTable, serial, timestamp } from 'drizzle-orm/pg-core';
-
-// This file defines the structure of your database tables using the Drizzle ORM.
-
-// To modify the database schema:
-// 1. Update this file with your desired changes.
-// 2. Generate a new migration by running: `npm run db:generate`
-
-// The generated migration file will reflect your schema changes.
-// It automatically run the command `db-server:file`, which apply the migration before Next.js starts in development mode,
-// Alternatively, if your database is running, you can run `npm run db:migrate` and there is no need to restart the server.
-
-// Need a database for production? Check out https://get.neon.com/BMFYNtx
-// Tested and compatible with Next.js Boilerplate
+import { boolean, integer, pgTable, serial, text, timestamp } from 'drizzle-orm/pg-core';
 
 export const counterSchema = pgTable('counter', {
   id: serial('id').primaryKey(),
@@ -21,4 +8,54 @@ export const counterSchema = pgTable('counter', {
     .$onUpdate(() => new Date())
     .notNull(),
   createdAt: timestamp('created_at', { mode: 'date' }).defaultNow().notNull(),
+});
+
+export const userSchema = pgTable('user', {
+  id: text('id').primaryKey(),
+  name: text('name').notNull(),
+  email: text('email').notNull().unique(),
+  emailVerified: boolean('email_verified').notNull(),
+  image: text('image'),
+  createdAt: timestamp('created_at').notNull(),
+  updatedAt: timestamp('updated_at').notNull(),
+});
+
+export const sessionSchema = pgTable('session', {
+  id: text('id').primaryKey(),
+  expiresAt: timestamp('expires_at').notNull(),
+  token: text('token').notNull().unique(),
+  createdAt: timestamp('created_at').notNull(),
+  updatedAt: timestamp('updated_at').notNull(),
+  ipAddress: text('ip_address'),
+  userAgent: text('user_agent'),
+  userId: text('user_id')
+    .notNull()
+    .references(() => userSchema.id, { onDelete: 'cascade' }),
+});
+
+export const accountSchema = pgTable('account', {
+  id: text('id').primaryKey(),
+  accountId: text('account_id').notNull(),
+  providerId: text('provider_id').notNull(),
+  userId: text('user_id')
+    .notNull()
+    .references(() => userSchema.id, { onDelete: 'cascade' }),
+  accessToken: text('access_token'),
+  refreshToken: text('refresh_token'),
+  idToken: text('id_token'),
+  accessTokenExpiresAt: timestamp('access_token_expires_at'),
+  refreshTokenExpiresAt: timestamp('refresh_token_expires_at'),
+  scope: text('scope'),
+  password: text('password'),
+  createdAt: timestamp('created_at').notNull(),
+  updatedAt: timestamp('updated_at').notNull(),
+});
+
+export const verificationSchema = pgTable('verification', {
+  id: text('id').primaryKey(),
+  identifier: text('identifier').notNull(),
+  value: text('value').notNull(),
+  expiresAt: timestamp('expires_at').notNull(),
+  createdAt: timestamp('created_at'),
+  updatedAt: timestamp('updated_at'),
 });

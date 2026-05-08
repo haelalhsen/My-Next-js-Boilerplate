@@ -1,8 +1,9 @@
-import { SignOutButton } from '@clerk/nextjs';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { LocaleSwitcher } from '@/components/LocaleSwitcher';
 import { Link } from '@/libs/I18nNavigation';
+import { routing } from '@/libs/I18nRouting';
 import { BaseTemplate } from '@/templates/BaseTemplate';
+import { SignOutButton } from './SignOutButton';
 
 export default async function DashboardLayout(props: {
   children: React.ReactNode;
@@ -14,6 +15,8 @@ export default async function DashboardLayout(props: {
     locale,
     namespace: 'DashboardLayout',
   });
+
+  const afterSignOutUrl = locale === routing.defaultLocale ? '/' : `/${locale}/`;
 
   return (
     <BaseTemplate
@@ -37,11 +40,7 @@ export default async function DashboardLayout(props: {
       rightNav={
         <>
           <li>
-            <SignOutButton>
-              <button className="border-none text-gray-700 hover:text-gray-900" type="button">
-                {t('sign_out')}
-              </button>
-            </SignOutButton>
+            <SignOutButton afterSignOutUrl={afterSignOutUrl}>{t('sign_out')}</SignOutButton>
           </li>
 
           <li>

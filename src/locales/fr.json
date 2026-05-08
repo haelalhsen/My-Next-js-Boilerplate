@@ -53,11 +53,24 @@
   },
   "SignIn": {
     "meta_title": "Se connecter",
-    "meta_description": "Connectez-vous à votre compte avec facilité."
+    "meta_description": "Connectez-vous à votre compte avec facilité.",
+    "email_label": "Adresse e-mail",
+    "password_label": "Mot de passe",
+    "button_sign_in": "Se connecter",
+    "no_account": "Pas encore de compte ?",
+    "sign_up_link": "S'inscrire",
+    "error_invalid_credentials": "Email ou mot de passe invalide"
   },
   "SignUp": {
     "meta_title": "S'inscrire",
-    "meta_description": "Créez un compte facilement grâce à notre processus d'inscription intuitif."
+    "meta_description": "Créez un compte facilement grâce à notre processus d'inscription intuitif.",
+    "name_label": "Nom",
+    "email_label": "Adresse e-mail",
+    "password_label": "Mot de passe",
+    "button_sign_up": "Créer un compte",
+    "have_account": "Vous avez déjà un compte ?",
+    "sign_in_link": "Se connecter",
+    "error_email_taken": "Un compte avec cet e-mail existe déjà"
   },
   "Dashboard": {
     "meta_title": "Tableau de bord",
@@ -66,7 +79,9 @@
     "max_message": "Ou, besoin d'une stack d'auth auto-hébergée (Better Auth) ? Essayez <url></url>."
   },
   "UserProfile": {
-    "meta_title": "Profil de l'utilisateur"
+    "meta_title": "Profil de l'utilisateur",
+    "name_label": "Nom",
+    "email_label": "Adresse e-mail"
   },
   "DashboardLayout": {
     "dashboard_link": "Tableau de bord",

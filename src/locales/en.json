@@ -53,11 +53,24 @@
   },
   "SignIn": {
     "meta_title": "Sign in",
-    "meta_description": "Seamlessly sign in to your account with our user-friendly login process."
+    "meta_description": "Seamlessly sign in to your account with our user-friendly login process.",
+    "email_label": "Email",
+    "password_label": "Password",
+    "button_sign_in": "Sign in",
+    "no_account": "Don't have an account?",
+    "sign_up_link": "Sign up",
+    "error_invalid_credentials": "Invalid email or password"
   },
   "SignUp": {
     "meta_title": "Sign up",
-    "meta_description": "Effortlessly create an account through our intuitive sign-up process."
+    "meta_description": "Effortlessly create an account through our intuitive sign-up process.",
+    "name_label": "Name",
+    "email_label": "Email",
+    "password_label": "Password",
+    "button_sign_up": "Create account",
+    "have_account": "Already have an account?",
+    "sign_in_link": "Sign in",
+    "error_email_taken": "An account with this email already exists"
   },
   "Dashboard": {
     "meta_title": "Dashboard",
@@ -66,7 +79,9 @@
     "max_message": "Or, need a Self-hosted auth stack (Better Auth)? Try <url></url>."
   },
   "UserProfile": {
-    "meta_title": "User Profile"
+    "meta_title": "User Profile",
+    "name_label": "Name",
+    "email_label": "Email"
   },
   "DashboardLayout": {
     "dashboard_link": "Dashboard",

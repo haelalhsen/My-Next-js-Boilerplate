@@ -1,17 +1,18 @@
-import { currentUser } from '@clerk/nextjs/server';
 import { getTranslations } from 'next-intl/server';
+import { headers } from 'next/headers';
+import { auth } from '@/libs/Auth';
 import { Sponsors } from './Sponsors';
 
 export const Hello = async () => {
   const t = await getTranslations('Dashboard');
-  const user = await currentUser();
+  const session = await auth.api.getSession({ headers: await headers() });
 
   return (
     <>
       <p>
         {`👋 `}
         {t('hello_message', {
-          email: user?.primaryEmailAddress?.emailAddress ?? '',
+          email: session?.user.email ?? '',
         })}
       </p>
       <p>
